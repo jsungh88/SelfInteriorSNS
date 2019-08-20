@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:text="알림 내역"
+            android:textSize="18dp"
+            android:paddingLeft="50dp"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/noti_btn_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@drawable/ic_close_black_24dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#bbbb" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/notification_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:spanCount="1"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/notification_item_like"
+        android:layout_marginHorizontal="5dp"
+        >
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.joanne.SELFINTERIOR"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+                arguments '-DANDROID_TOOLCHAIN=gcc',
+                        '-DANDROID_STL=gnustl_static'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '27.0.3'
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    //    implementation 'com.android.support:support-vector-drawable:27.1.1'
+    //    implementation 'com.android.support:animated-vector-drawable:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    //noinspection GradleCompatible
+    implementation 'com.google.android.gms:play-services-maps:15.0.1'
+    //구글맵
+    implementation 'com.google.android.gms:play-services-location:15.0.1'
+    //구글맵
+    implementation 'com.google.android.gms:play-services-places:15.0.1'
+    //구글맵
+    implementation 'com.android.support:support-v4:27.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //Retrofit2, json파싱 컨버터
+    compile 'com.squareup.retrofit2:retrofit:2.4.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //http버그 잡아주는거
+    compile 'com.squareup.okhttp3:okhttp:3.9.1'
+    compile 'com.squareup.okhttp3:okhttp:3.0.0-RC1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    //recyclerview
+    compile 'com.android.support:recyclerview-v7:27.1.1'
+    //floating Button
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    //hashtag API
+    compile 'com.github.danylovolokh:hashtag-helper:1.1.0'
+    //noinspection GradleCompatible
+    compile 'com.android.support:cardview-v7:27.1.1'
+    // Google Play services Auth split
+    //noinspection GradleCompatible
+    compile 'com.google.android.gms:play-services-auth:15.0.1'
+    // Google Api Client library and Android extension
+    compile 'com.google.api-client:google-api-client:1.22.0'
+    compile 'com.google.api-client:google-api-client-android:1.22.0'
+    // Change to the API you want to access:
+    // Below is just an example for People REST API access
+    compile 'com.google.apis:google-api-services-people:v1-rev4-1.22.0'
+    compile 'com.google.firebase:firebase-core:16.0.1'
+    compile 'com.google.firebase:firebase-messaging:17.1.0'
+    //pageIndicator
+    compile 'com.github.badoualy:stepper-indicator:1.0.7'
+    compile 'com.github.ParkSangGwon:TedPicker:v1.0.10'
+    implementation project(':openCVLibrary342')
+    implementation 'info.androidhive:imagefilters:1.0.7'
+    // butter knife
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // dexter M permissions
+    compile 'com.karumi:dexter:4.1.0'
+}
+apply plugin: 'com.google.gms.google-services'

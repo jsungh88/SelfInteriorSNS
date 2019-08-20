@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- 상단 바 : 뒤로가기, 마이페이지, 알림 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/mypage_btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+        <TextView
+            android:id="@+id/mypage_title_mypage"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="마이페이지"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/mypage_title_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="회원정보"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/mypage_btn_notification"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_notifications_black_24dp" />
+
+    </LinearLayout>
+
+
+    <!-- 프로필 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/border2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <!-- 회원가입정보 : 이미지, 이름, 성별, 연령대, 이메일주소, 프로필수정 버튼-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="10dp">
+
+            <!-- 이미지 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/mypage_uImage"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginBottom="10dp" />
+            </LinearLayout>
+
+
+            <!-- 이름,성별,연령대,메일주소,프로필수정-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical">
+
+                <!-- 이름, 성별, 연령대-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mypage_uName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="사용자명"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:text="(" />
+
+                    <TextView
+                        android:id="@+id/mypage_uGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:text="성별"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:text="/" />
+
+                    <TextView
+                        android:id="@+id/mypage_uAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:text="연령대"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:text=")" />
+                </LinearLayout>
+
+                <!-- 이메일주소 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mypage_uEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="jsungh88@nate.com"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <!-- 프로필수정 버튼-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:ignore="Orientation">
+
+                        <Button
+                            android:id="@+id/mypage_btn_uEdit"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="프로필 편집"
+                            android:visibility="visible" />
+
+                        <!--<Button-->
+                            <!--android:id="@+id/mypage_btn_viewcall"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="40dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:text="1:1 영상통화"-->
+                            <!--android:visibility="visible" />-->
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/mypage_btn_follow"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/follow_button"
+                        android:stateListAnimator="@animator/scale"
+                        android:text="팔로우"
+                        android:textColor="#ffff"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/mypage_btn_following"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/following_button"
+                        android:stateListAnimator="@animator/scale"
+                        android:text="팔로잉"
+                        android:textColor="#bb000000"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="#bbbb" />
+        <!-- 프로필 활동영역: 관심글, 팔로잉, 팔로워-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- 관심글 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/mypage_favorite"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/border2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="관심글"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
+                <!-- 팔로잉 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/mypage_following"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/border2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="팔로잉"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
+                <!-- 팔로워 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/mypage_follower"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/border2" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="팔로워"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="0"
+                            android:textColor="@color/colorAccent"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 글 리스트 영역: 노하우, 스타일북, Q&A -->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/mypage_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabGravity="center"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorAccent">
+
+    </android.support.design.widget.TabLayout>
+
+    <include layout="@layout/mypage_viewpager" />
+
+</LinearLayout>

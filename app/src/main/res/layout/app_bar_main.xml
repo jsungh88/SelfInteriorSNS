@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextColor="#ffff"/>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/main_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:tabGravity="center"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#ffff"
+            app:tabTextColor="@color/filter_label_normal">
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <com.getbase.floatingactionbutton.FloatingActionsMenu
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:id="@+id/multiple_actions"
+           android:layout_margin="16dp"
+           android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+           android:layout_alignParentEnd="true"
+           app:fab_addButtonColorNormal="@color/colorAccent"
+           app:fab_addButtonColorPressed="#b9d579"
+           app:fab_addButtonPlusIconColor="#ffff"
+           app:fab_labelStyle="@style/menu_labels_style"
+
+           >
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_stylebook"
+            app:fab_icon="@drawable/stylebook_register"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="#b9d579"
+            app:fab_size="mini"
+            app:fab_title="스타일북 글쓰기"
+            android:onClick="styleRegister"/>
+
+
+           <com.getbase.floatingactionbutton.FloatingActionButton
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/btn_knowhow"
+               app:fab_icon="@drawable/write"
+               app:fab_colorNormal="@color/colorAccent"
+               app:fab_colorPressed="#b9d579"
+               app:fab_size="mini"
+               app:fab_title="노하우 글쓰기"
+               android:onClick="knowhowRegister"
+               />
+           <com.getbase.floatingactionbutton.FloatingActionButton
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:id="@+id/btn_qna"
+               app:fab_icon="@drawable/question_register"
+               app:fab_colorNormal="@color/colorAccent"
+               app:fab_colorPressed="#b9d579"
+               app:fab_size="mini"
+               app:fab_title="QnA 글쓰기"
+               />
+       </com.getbase.floatingactionbutton.FloatingActionsMenu>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

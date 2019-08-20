@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/knowhow_item_layout"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/kh_picture"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="false"
+                android:layout_margin="5dp"
+                android:scaleType="centerCrop" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <!--태그-->
+                <TextView
+                    android:id="@+id/kh_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:text="#심플 #플렌테리어"
+                    android:textSize="13dp" />
+
+                <!--제목-->
+                <TextView
+                    android:id="@+id/kh_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="식물로 그린그린한 공간 만들어봤어요:)"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+                //구분선
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#d1d1d1"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/kh_uimage"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="4dp"
+                        android:scaleType="centerInside" />
+
+                    <TextView
+                        android:id="@+id/kh_uname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="사용자명"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorMiddleBlue"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right|center_vertical">
+
+                        <CheckBox
+                            android:id="@+id/kh_like"
+                            android:layout_width="19dp"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="4dp"
+                            android:clickable="false"
+                            android:gravity="right"
+                            android:button="@null"
+                            android:stateListAnimator="@animator/scale"
+                            android:checked="false"
+                            app:layout_constraintTop_toBottomOf="@+id/image"
+                            android:background="@drawable/like_icon"
+                            android:focusable="true" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="좋아요"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/kh_like_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_marginRight="10dp"
+                            android:text="0"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryLight"/>
+
+                        <ImageView
+                            android:id="@+id/kh_comment"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginRight="4dp"
+                            app:srcCompat="@drawable/ic_comment_black_24dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:text="댓글"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/kh_comment_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="0"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryLight"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

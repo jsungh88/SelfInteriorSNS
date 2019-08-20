@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="110dp"-->
+    <!--android:src="@drawable/indicator_step2" />-->
+
+    <!--</LinearLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="110dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+        <!--제목입력-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingLeft="5dp"
+                android:text="2-1. 제목 입력" />
+
+            <EditText
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/border2"
+                android:hint=" 제목을 입력해주세요."
+                android:padding="10dp"
+                android:textColor="@color/colorGray"
+                android:textSize="12dp" />
+            <!--</LinearLayout>-->
+
+            <!--사진 및 설명-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginHorizontal="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="vertical">-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingLeft="5dp"
+                android:text="2-2. 사진 및 설명" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/img1"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp" />-->
+            <!--<ImageView-->
+            <!--android:id="@+id/img2"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp" />-->
+            <!--<ImageView-->
+            <!--android:id="@+id/img3"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp" />-->
+            <Button
+                android:id="@+id/btn_pic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:text="사진 선택"
+                android:textColor="#353535"
+                android:textSize="12dp" />
+            <!--android:background="@drawable/border2"-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginHorizontal="20dp"-->
+            <!--android:visibility="gone">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+            <HorizontalScrollView
+                android:id="@+id/hori_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="false"
+                android:foregroundGravity="left">
+
+                <!--이미지 담기는 레이아웃-->
+                <LinearLayout
+                    android:id="@+id/selected_photos_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_gravity="left"
+                    android:animateLayoutChanges="true"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="5dp"
+                android:text="2-3. 설명" />
+
+            <EditText
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="10dp"
+                android:gravity="left"
+                android:layout_margin="10dp"
+                android:background="@drawable/border2"
+                android:hint=" 설명을 입력해주세요."
+                android:padding="10dp"
+                android:textColor="@color/colorGray"
+                android:inputType="textMultiLine"
+                android:textSize="12dp" />
+            <!--</LinearLayout>-->
+
+            <!--태그-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginHorizontal="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:orientation="vertical">-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingLeft="5dp"
+                android:text="2-4. 태그" />
+
+            <EditText
+                android:id="@+id/tags"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/border2"
+                android:hint=" 태그를 입력해주세요."
+                android:padding="10dp"
+                android:textColor="@color/colorGray"
+                android:textSize="12dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/laststep"
+        style="@style/AppTheme"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:hint="> 다음 단계로 이동"
+        android:textSize="15dp"
+        android:background="@color/colorGray"/>
+
+    <!--태그-->
+</LinearLayout>

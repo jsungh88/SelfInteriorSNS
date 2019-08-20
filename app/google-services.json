@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "498305906868",
+    "firebase_url": "https://selfinterior-93a8c.firebaseio.com",
+    "project_id": "selfinterior-93a8c",
+    "storage_bucket": "selfinterior-93a8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498305906868:android:1014792f8e60d126",
+        "android_client_info": {
+          "package_name": "com.example.joanne.SELFINTERIOR"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498305906868-6u45g44p8f3ehdul2i5ldjve4gq3bk0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.joanne.SELFINTERIOR",
+            "certificate_hash": "da4b7735f0d37fd988ea4dfd9a0d910df57dd58c"
+          }
+        },
+        {
+          "client_id": "498305906868-sdr7e7s488crmlqsgl9gffgh8ud87ak2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtsgMmQMh9KM5EColdmGAzmJcfvioQ2Ac"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498305906868-sdr7e7s488crmlqsgl9gffgh8ud87ak2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:id="@+id/card_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/stylebook_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffff"
+        android:orientation="vertical">
+
+        //이미지
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/sb_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="false"
+                android:scaleType="fitStart"
+                />
+        </LinearLayout>
+
+        //태그
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sb_tags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="#태그1, #태그2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        //작성자
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/sb_uimage"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp" />
+
+            <TextView
+                android:id="@+id/sb_uname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="작성자명"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="2dp"
+            android:background="#bbbb" />
+        <!--android:layout_marginHorizontal="5dp"-->
+        <!--android:layout_marginBottom="5dp"-->
+
+        //좋아요,댓글
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/sb_btn_like"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:clickable="false"
+                android:button="@null"
+                android:stateListAnimator="@animator/scale"
+                android:checked="false"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                android:background="@drawable/like_icon"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/sb_like_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:textSize="15dp" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                app:srcCompat="@drawable/ic_comment_black_24dp" />
+
+            <TextView
+                android:id="@+id/sb_comments_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <!--//등록일자-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginHorizontal="5dp">-->
+        <!--<TextView-->
+        <!--android:id="@+id/sb_date"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginHorizontal="10dp"-->
+        <!--android:layout_marginVertical="5dp"-->
+        <!--android:text="2018-06-12 오후 6:00"-->
+        <!--android:textSize="13dp"-->
+        <!--/>-->
+
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/noti_layout_follow">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp">
+            <ImageView
+                android:id="@+id/noti_uimage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_image"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <!--<TextView-->
+                    <!--android:id="@+id/noti_sender"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginBottom="5dp"-->
+                    <!--android:layout_marginRight="2dp"-->
+                    <!--android:text="joanne"-->
+                    <!--android:textSize="14dp"-->
+                    <!--android:textStyle="bold" />-->
+
+                <TextView
+                    android:id="@+id/noti_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:text=""
+                    android:textSize="13dp"
+                    />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="5dp"
+            android:gravity="bottom"
+            >
+            <TextView
+                android:id="@+id/noti_regdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-06-29 13:50"
+                android:textSize="11dp"
+                android:textColor="#bb7a7373"
+                android:layout_marginTop="5dp"
+                android:gravity="bottom"/>
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            >
+            <Button
+                android:id="@+id/noti_btn_follow"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:text="팔로우"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="#ffff"
+                android:background="@color/colorHashTag"/>
+            <Button
+                android:id="@+id/noti_btn_following"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:text="팔로잉"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorHashTag"
+                android:background="#ffff"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="2dp"
+        android:background="#bbbb" />
+</LinearLayout>

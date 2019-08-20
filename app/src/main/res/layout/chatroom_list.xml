@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:text="채팅리스트"
+            android:textSize="20dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/chat_btnClose"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/ic_close_black_24dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            //참여중인 채팅 리스트
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_rectangle_orange"
+                    android:padding="5dp"
+                    android:text="  참여중인 채팅방"
+                    android:textColor="#ffff" />
+
+                <!--<android.support.v4.widget.SwipeRefreshLayout-->
+                    <!--android:id="@+id/swipe_layout1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/chatroomlist_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+            </LinearLayout>
+            //참여중이지않은 채팅 리스트
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/rounded_rectangle_gray"
+                    android:padding="5dp"
+                    android:text="  참여중이지 않은 채팅방"
+                    android:textColor="#ffff" />
+
+                <!--<android.support.v4.widget.SwipeRefreshLayout-->
+                    <!--android:id="@+id/swipe_layout2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/chatroomlist_out"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+                <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_newchat"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            ></android.support.design.widget.FloatingActionButton>
+    </LinearLayout>
+
+</FrameLayout>
+
