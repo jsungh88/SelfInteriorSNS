@@ -17,5 +17,5 @@
 * 공간정보 글 등록시, GooglePlaceAPI사용하여 장소위치 표시
 * FCM(Firebase Cloud Messaging)을 이용한 알림(팔로우,좋아요,댓글)기능
 * Recyclerview사용하여 댓글/대댓글 구현
-* TCP/IP 프로토콜을 사용한 오픈채팅방
+* TCP/IP 통신 오픈채팅 구현
 * OpenCV를 이용한 프로필 변경
