@@ -97,8 +97,8 @@ public class ChatRoomListActivity extends AppCompatActivity {
 //                android.R.color.holo_red_light
 //        );
 
-        roomRecyclerView_in = findViewById(R.id.chatroomlist_in);
-        roomRecyclerView_out = findViewById(R.id.chatroomlist_out);
+        roomRecyclerView_in = findViewById(R.id.chatroomlist_in);   //참여중인 채팅방
+        roomRecyclerView_out = findViewById(R.id.chatroomlist_out);   //참여중이지 않은 채팅방
         roomRecyclerView_in.setHasFixedSize(true);
         roomRecyclerView_out.setHasFixedSize(true);
         fab = findViewById(R.id.fab_newchat);
